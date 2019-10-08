@@ -1,0 +1,62 @@
+{
+	"/cars": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/newCustomer": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/deletecar": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/getuserinfo": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/insertcar": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/myrentals": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/rentcar": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/returncar": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/updatecar": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	},
+	"/login": {
+		"target": "http://localhost:8080",
+		"secure": false,
+		"logLevel": "debug",
+		"changeOrigin": true
+	}
+}

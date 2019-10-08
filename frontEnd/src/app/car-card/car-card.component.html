@@ -1,0 +1,21 @@
+<mat-card *ngIf="car" [ngClass]="get_selected_style()" (click)="selected()">
+    <img mat-card-image src={{car.picture}}>
+    <mat-card-content class="flex-row">
+        <mat-accordion>
+            <mat-expansion-panel disabled class="no-box" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <div class="flex-start">
+                            <span><strong>{{car.make}}</strong></span>
+                            <span>{{car.model}}</span>
+                            <span>{{car.year}}</span>
+                        </div>
+                    </mat-panel-title>
+                    <mat-panel-description class="flex-end">
+                        <mat-icon>place</mat-icon>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

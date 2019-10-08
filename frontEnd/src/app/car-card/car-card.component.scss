@@ -1,0 +1,68 @@
+.selected {
+    border: 1px solid green;
+}
+
+.no-box {
+  box-shadow: none !important;
+}
+.mat-expansion-panel-header[aria-disabled=true] {
+  color: rgba(0,0,0,.87) !important;
+}
+mat-accordion:hover {
+  background-color: white !important;
+}
+
+mat-accordion{
+  flex-grow: 1;
+
+}
+
+mat-panel-description{
+  margin: 0%;
+  flex-grow: 1;
+}
+mat-card:hover {
+  cursor: pointer;
+}
+
+mat-expansion-panel:hover {
+  background-color: white !important;
+}
+
+mat-expansion-panel{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+mat-expansion-panel-header:hover {
+  background-color: white !important;
+}
+
+mat-expansion-panel-header {
+  padding: 0%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: left;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+}

@@ -1,0 +1,61 @@
+<mat-card class="dead-center" style="margin-top: 250px">
+            <mat-card-title>Register</mat-card-title>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="first_name">first Name</label>
+                    <input type="text" formControlName="first_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" />
+                    <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.first_name.errors.required">first Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">last Name</label>
+                    <input type="text" formControlName="last_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" />
+                    <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.last_name.errors.required">last Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="driver_license">driver License</label>
+                    <input type="text" formControlName="driver_license" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.driver_license.errors }" />
+                    <div *ngIf="submitted && f.driver_license.errors" class="invalid-feedback">
+                        <div *ngIf="f.driver_license.errors.required">driver License is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="role">Role</label>
+                        <input type="text" formControlName="role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }" />
+                        <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                            <div *ngIf="f.role.errors.required">last Name is required</div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" formControlName="age" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
+                    <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+                        <div *ngIf="f.age.errors.required">last Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="pwd" formControlName="pwd" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pwd.errors }" />
+                    <div *ngIf="submitted && f.pwd.errors" class="invalid-feedback">
+                        <div *ngIf="f.pwd.errors.required">Password is required</div>
+                        <div *ngIf="f.pwd.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button [disabled]="loading" mat-raised-button color="primary">Register</button>
+                    <button routerLink="/login" mat-flat-button>Cancel</button>
+                    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+                </div>
+            </form>    
+</mat-card>

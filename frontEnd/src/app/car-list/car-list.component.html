@@ -1,0 +1,4 @@
+<div class="dead-center" *ngIf="!cars">
+  <mat-spinner></mat-spinner>
+</div>
+<app-car-booking *ngIf="cars" [cars]="cars"></app-car-booking>

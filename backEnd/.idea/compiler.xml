@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="carhateoas4" />
+        <module name="carhateoas2" />
+        <module name="carhateoas1" />
+        <module name="carhateoas" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="carhateoas" target="1.8" />
+      <module name="carhateoas1" target="1.8" />
+      <module name="carhateoas2" target="1.8" />
+      <module name="carhateoas4" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carhateoas4" options="-parameters" />
+    </option>
+  </component>
+</project>

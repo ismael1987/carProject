@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: white;
+    }
+}
+
+section {
+	app-login {
+		display:flex;
+		align-items:center;
+        justify-content:center;
+        height: calc(100% - 78px);
+	}
+	
+	app-register {
+		display:flex;
+		align-items:center;
+        justify-content:center;
+        height: calc(100% - 78px);
+	}
+	
+	
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    height: calc(100% - 78px);
+	padding-top: 0px;
+}

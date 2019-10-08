@@ -1,0 +1,29 @@
+<h1>My Bookings</h1>
+<div *ngIf="!rentals" class="dead-center">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="rentals" class="dead-center">
+  <div *ngIf="rentals.length===0">
+    <h1>NO RENTALS</h1>
+  </div>
+  <div *ngFor="let rental of rentals">
+    <mat-card>
+      <img mat-card-image src={{rental.picture}}>
+      <mat-card-content class="flex-row">
+        <mat-accordion>
+          <mat-panel-title>
+            <div class="flex-start">
+              <span><strong>{{rental.make}}</strong></span>
+              <span>{{rental.model}}</span>
+              <span>{{rental.year}}</span>
+              <span>From: {{rental.beginrental}}</span>
+              <span>To: {{rental.endrental}}</span>
+              <button mat-button color="primary" (click)="return(rental.rental_id)">Return</button>
+            </div>
+          </mat-panel-title>
+        </mat-accordion>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div *ngIf="cars" class="flex-column">
+    <div class="flex-row">
+        <button mat-button (click)="prev()" class="nav-button">
+            <i class="material-icons">navigate_before</i>
+        </button>
+        <carousel-component [initialSlide]="cars.length/2" [mode]="'horizontal'" [morePairSlides]="moreSlides"
+            [angle]="degree" #topCarousel class="style-carousel carousel">
+            <div *ngFor="let car of cars" class="item-carousel">
+                <app-car-card (selected_car)="onSelected($event)" [car_selected]=selected_car [car]=car></app-car-card>
+            </div>
+        </carousel-component>
+        <button mat-button (click)="next()" class="nav-button">
+            <i class="material-icons">navigate_next</i>
+        </button>
+    </div>
+    <div class="flex-row">
+        <app-map *ngIf="selected_car" [lat]=selected_car.location.latitude [lng]=selected_car.location.longitude
+            [label]=selected_car.make class="map"></app-map>
+        <div class="flex-row">
+            <mat-card class="stepper">
+                <mat-card-title>Select Date</mat-card-title>
+                <mat-card-content class="flex-row" style="justify-content: center;">
+                    <mat-horizontal-stepper #stepper [linear]="isLinear" #stepper>
+                        <mat-step label="Enter from date">
+                            <app-date-picker (selected_date)="onSelectedFromDate($event)" placeholder="From">
+                            </app-date-picker>
+                        </mat-step>
+                        <mat-step label="Enter to date">
+                            <app-date-picker (selected_date)="onSelectedToDate($event)" placeholder="To">
+                            </app-date-picker>
+                        </mat-step>
+                        <mat-step *ngIf="selected_car" label="Currency">
+                            <mat-form-field>
+                                <mat-label>Currency</mat-label>
+                                <mat-select #currencySelect (selectionChange)="selected($event)">
+                                    <mat-option value="USD">
+                                        USD: {{selected_car.USD}}
+                                    </mat-option>
+                                    <mat-option value="EUR">
+                                        EUR: {{selected_car.EUR}}
+                                    </mat-option>
+                                    <mat-option value="CHF">
+                                        CHF: {{selected_car.CHF}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Done">
+                            <button mat-button mat-raised-button color="primary" (click)="book()">Book</button>
+                        </mat-step>
+                    </mat-horizontal-stepper>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+</div>
